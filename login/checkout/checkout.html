@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="checkout.css">
+    <title>Hotel Reservation</title>
+</head>
+<body>
+    <section class="contact" id="contact">
+        <div class="content">
+            <h3 class="heading">Some <span>people</span> look for a beautiful venue, <span>You</span> make a place beautiful.</h3>
+        </div>
+        <form name="form" action="../login/gateway.php" onsubmit="return validateform()" method="post">
+            <div class="inputbox" style="display: flex;flex-direction: column;">
+                <!-- Dropdown for hotel names with images and addresses -->
+                <div style="flex: 1;">
+                    <h3 class="heading" style="font-size: 2rem;color: white;font-weight: bold;">Select Venue</h3>
+                    <div class="dropdown">
+                        <select id="hotel" name="hotel" onchange="updateBackground()">
+                            <option value="hotel1">Hotel 1 - 123 Main Street, City</option>
+                            <option value="hotel2">Hotel 2 - 456 Oak Avenue, Town</option>
+                            <option value="hotel3">Hotel 3 - 789 Pine Road, Village</option>
+                        </select>
+                    </div>
+                </div>
+                <div style="flex: 1;">
+                    <!-- Date input -->
+                    <h3 class="heading" style="font-size: 2rem;color: white;font-weight: bold;">Select Date</h3>
+                    <input type="date" id="date" name="date" style="color: white;" >
+                </div>
+            </div>
+            <textarea name="message" placeholder="Your Message" id="" cols="30" rows="10" required></textarea>
+            <input type="submit" value="Book Now" class="btn" style="font-weight: bold;">  
+        </form>
+    </section>
+
+    <script>
+        function updateBackground() {
+            // Get selected hotel value
+            var selectedHotel = document.getElementById("hotel").value;
+
+            // Update background image of the body based on the selected hotel
+            document.body.style.background = "url('" + getBackgroundImage(selectedHotel) + "') fixed center/cover";
+        }
+
+        function getBackgroundImage(hotel) {
+            switch (hotel) {
+                case 'hotel1':
+                    return 'birthday2.jpg'; // Update with the correct URL for Hotel 1
+                case 'hotel2':
+                    return 'birthday3.jpg'; // Update with the correct URL for Hotel 2
+                case 'hotel3':
+                    return 'download.jpg'; // Update with the correct URL for Hotel 3
+                default:
+                    return '../IMAGES/bg.png'; // Default image URL
+            }
+        }
+
+        
+
+        
+
+    </script>
+</body>
+</html>

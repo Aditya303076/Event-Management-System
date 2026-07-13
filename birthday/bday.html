@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bday.css">
+    <title>Birthday Party Planner</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Birthday Party Planner</h1>
+        <form action="submit_form.php" method="post">
+            <div class="selection">
+                <label for="cakeFlavor">Choose Birthday Cake Flavor:</label>
+                <div class="image-options">
+                    <label>
+                        <input type="radio" id="vanilla" name="cakeFlavor" value="vanilla" required>
+                        <img src="vanilla.jpg" alt="Vanilla" class="option-image">
+                    </label>
+                    <label>
+                        <input type="radio" id="chocolate" name="cakeFlavor" value="chocolate">
+                        <img src="chocolate.jpg" alt="Chocolate" class="option-image">
+                    </label>
+                    <label>
+                        <input type="radio" id="strawberry" name="cakeFlavor" value="strawberry">
+                        <img src="strawberry.jpg" alt="Strawberry" class="option-image">
+                    </label>
+                    <!-- Add more flavor options as needed -->
+                </div>
+            </div>
+
+            <div class="selection">
+                <label>Choose Decoration:</label>
+                <div class="image-options">
+                    <label>
+                        <input type="radio" id="balloons" name="decoration" value="balloons" required>
+                        <img src="balloons.jpg" alt="Balloons" class="option-image">
+                    </label>
+                    <label>
+                        <input type="radio" id="streamers" name="decoration" value="streamers">
+                        <img src="streamers.jpg" alt="Streamers" class="option-image">
+                    </label>
+                    <label>
+                        <input type="radio" id="confetti" name="decoration" value="confetti">
+                        <img src="confetti.jpg" alt="Confetti" class="option-image">
+                    </label>
+                    <!-- Add more decoration options as needed -->
+                </div>
+            </div>
+
+            <div class="selection">
+                <label for="snackCombo">Choose Snack and Soft Drink Combo:</label>
+                <div class="image-options">
+                    <label>
+                        <input type="radio" id="combo1" name="snackCombo" value="combo1" required>
+                        <img src="combo1.jpg" alt="Combo 1" class="option-image">
+                    </label>
+                    <label>
+                        <input type="radio" id="combo2" name="snackCombo" value="combo2">
+                        <img src="combo2.jpg" alt="Combo 2" class="option-image">
+                    </label>
+                    <label>
+                        <input type="radio" id="combo3" name="snackCombo" value="combo3">
+                        <img src="combo3.jpg" alt="Combo 3" class="option-image">
+                    </label>
+                    <!-- Add more combo options as needed -->
+                </div>
+            </div>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
