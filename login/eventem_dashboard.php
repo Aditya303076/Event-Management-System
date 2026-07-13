@@ -7,10 +7,10 @@
         exit();
     }
 
-    $servername = "localhost";
-    $username = "root";
-    $password = "";
-    $dbname = "event_mgt";
+    $servername = getenv('DB_HOST') ?: "localhost";
+    $username = getenv('DB_USER') ?: "root";
+    $password = getenv('DB_PASSWORD') !== false ? getenv('DB_PASSWORD') : "";
+    $dbname = getenv('DB_NAME') ?: "event_mgt";
 
     // Handle CSV Export
     if (isset($_GET['export_csv']) && is_numeric($_GET['export_csv'])) {

@@ -1,10 +1,10 @@
 <?php
     session_start();
     
-    $servername = "localhost";
-    $username = "root";
-    $password = "";
-    $dbname = "event_mgt";
+    $servername = getenv('DB_HOST') ?: "localhost";
+    $username = getenv('DB_USER') ?: "root";
+    $password = getenv('DB_PASSWORD') !== false ? getenv('DB_PASSWORD') : "";
+    $dbname = getenv('DB_NAME') ?: "event_mgt";
 
     // AJAX Receiver for inline status changes
     if (isset($_GET['update_id']) && isset($_GET['new_status'])) {

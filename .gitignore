@@ -1,0 +1,19 @@
+# Workspace context files
+context.md
+
+# Operating System files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Development configurations and caches
+.env
+.vscode/
+.idea/
+.gemini/
+*.log
+
+# XAMPP / Local server runtime locks
+*.tmp
+*.bak

@@ -46,10 +46,10 @@
     </div>
 
     <?php
-    $servername = "localhost";
-    $username = "root";
-    $password = "";
-    $dbname = "event_mgt";
+    $servername = getenv('DB_HOST') ?: "localhost";
+    $username = getenv('DB_USER') ?: "root";
+    $password = getenv('DB_PASSWORD') !== false ? getenv('DB_PASSWORD') : "";
+    $dbname = getenv('DB_NAME') ?: "event_mgt";
 
     $conn = new mysqli($servername, $username, $password, $dbname);
 
